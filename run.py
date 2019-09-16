@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-post[{
+post = [{
     'author': 'nill blake',
     'title':'Example of pitches',
     'content': 'contents',
@@ -24,7 +24,7 @@ post[{
 }
 ]
 @app.route('/')
-def index():
+def home():
     return render_template("home.html",post=post)
 
 
