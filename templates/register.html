@@ -1,6 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
+</form>
+    <div class="container">
+        <p>fill in the form below to creatt an account with us </p>
+        <br>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="user nickname" name="nickname" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="confirm Password" name="psw-confirm" required>
 
+        <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:20px"> Remember me
+              </label>
+          
+              <p>By creating an account you agree to our <a href="#" ></a>Terms & Privacy</a>.</p>
+          
+              <div class="clear">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+    </div>
+    
 
 
 
