@@ -6,7 +6,7 @@ post = [{
     'author': 'nill blake',
     'title':'Example of pitches',
     'content': 'contents',
-    'date': 'jan 17 2010'
+    'date':'jan 17 2010'
 },
 {
     'author': 'booterkn boika',
