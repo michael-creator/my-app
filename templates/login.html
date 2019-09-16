@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+{{super()}}
     <div class="container">
-      <h1>login</h1>
-      <br>
-      <form action="" method="post">
-        <input type="text" placeholder="Username" name="username" value="{{
-          request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
-        <input class="btn btn-default" type="submit" value="Login">
-      </form>
+     <div class="jumbotron">
+            <h1>login</h1>
+            <br>
+            <form action="" method="post">
+              <input type="text" placeholder="Username" name="username" value="{{
+                request.form.username }}" class="form-control">
+               <input type="password" placeholder="Password" name="password" value="{{
+                request.form.password }}" class="form-control">
+              <input class="btn btn-default" type="submit" value="Login" class="form-control">
+                <br>
+              <button class="btn btn-danger">login</button>
+            </form>
+     </div>
     </div>
   {% endblock %}

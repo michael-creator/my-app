@@ -43,18 +43,19 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 
-    def signup(request):
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = request.method == 'POST'
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('signup')
     else:
-        form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
+        print('# form = UserCreationForm()')
+    return render_template( 'signup.html')
 if __name__ == '__main__':
     app.run(debug = True)
