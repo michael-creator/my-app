@@ -25,12 +25,13 @@ post = [{
 ]
 @app.route('/')
 def home():
-    return render_template("home.html",post=post)
-
-
-@app.route('/about')
-def about():
-    return render_template("about.html",post=post)
+    return render_template("homepage.html",post=post)
+@app.route('/homepage')
+def homepage():
+    return render_template("homepage.html",post=post)
+@app.route('/pitches')
+def pitches():
+    return render_template("pitches.html",post=post)
 
 # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
